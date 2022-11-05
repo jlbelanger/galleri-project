@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 
 read -p "Enter your project title (eg. 'My Gallery'): " project_title
@@ -15,7 +15,7 @@ printf "[1] Dark\n"
 printf "[2] Light\n"
 printf "[3] Minimal (no theme)\n"
 read -p "Enter 1, 2, or 3: " theme
-if "${theme}" == "1"; then
+if [[ "${theme}" == "1" ]]; then
 	rm scss/light.scss
 	rm public/light.html
 	rm public/css/light.min.css
@@ -25,7 +25,7 @@ if "${theme}" == "1"; then
 	rm public/css/minimal.min.css
 
 	mv public/dark.html public/index.html
-elif "${theme}" == "2"; then
+elif [[ "${theme}" == "2" ]]; then
 	rm scss/dark.scss
 	rm public/dark.html
 	rm public/css/dark.min.css
@@ -38,7 +38,7 @@ elif "${theme}" == "2"; then
 
 	sed --in-place "s|dark.min.css|light.min.css|" public/403.html
 	sed --in-place "s|dark.min.css|light.min.css|" public/404.html
-elif "${theme}" == "3"; then
+elif [[ "${theme}" == "3" ]]; then
 	rm scss/light.scss
 	rm public/light.html
 	rm public/css/light.min.css
