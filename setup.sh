@@ -65,4 +65,6 @@ mkdir public/json
 read -p "Enter the username you want to use to login: " username
 htpasswd -c .htpasswd "${username}"
 
+printf "Done!\n"
+
 rm setup.sh
