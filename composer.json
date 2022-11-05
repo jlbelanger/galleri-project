@@ -1,0 +1,23 @@
+{
+	"name": "jlbelanger/robroy-project",
+	"description": "Robroy Photo Gallery Demo",
+	"type": "project",
+	"license": "GPL-3.0-only",
+	"require": {
+		"jlbelanger/robroy": "@dev",
+		"vlucas/phpdotenv": "^5.4.1"
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "git@github.com:jlbelanger/robroy.git"
+		}
+	],
+	"scripts": {
+		"post-create-project-cmd": [
+			"./setup.sh"
+		]
+	}
+}

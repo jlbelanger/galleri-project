@@ -1,0 +1,6 @@
+.DS_Store
+.env
+.htpasswd
+*.log
+/node_modules
+/vendor
