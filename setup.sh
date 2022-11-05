@@ -21,7 +21,7 @@ if [[ "${theme}" == "1" ]]; then
 	rm public/css/light.min.css
 
 	rm scss/minimal.scss
-	rm public/minimal.min.css
+	rm public/minimal.html
 	rm public/css/minimal.min.css
 
 	mv public/dark.html public/index.html
@@ -31,7 +31,7 @@ elif [[ "${theme}" == "2" ]]; then
 	rm public/css/dark.min.css
 
 	rm scss/minimal.scss
-	rm public/minimal.min.css
+	rm public/minimal.html
 	rm public/css/minimal.min.css
 
 	mv public/light.html public/index.html
