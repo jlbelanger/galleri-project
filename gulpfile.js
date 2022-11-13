@@ -10,7 +10,7 @@ function css() {
 		.pipe(sass())
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(postcss([autoprefixer(), cssnano()]))
-		.pipe(gulp.dest('public'));
+		.pipe(gulp.dest('public/css'));
 }
 
 gulp.task('default', () => {
