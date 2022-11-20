@@ -41,6 +41,10 @@ mkdir public/images
 mkdir public/js
 mkdir public/json
 
+sed --in-place "s|dark.min.css|style.min.css|" public/403.html
+sed --in-place "s|dark.min.css|style.min.css|" public/404.html
+sed --in-place "s|dark.min.css|style.min.css|" public/index.html
+
 yarn install
 yarn build
 cp node_modules/@jlbelanger/robroy/dist/js/robroy.min.js public/js
