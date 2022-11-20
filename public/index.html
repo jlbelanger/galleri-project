@@ -46,18 +46,22 @@
 			enableGrid: true,
 
 			modifiers: {
-				breadcrumbList: ({ element }) => {},
+				adminBar: ({ element }) => {},
+				breadcrumbList: ({ element, folder }) => {},
 				breadcrumbItem: ({ element, folder }) => {},
-				folderItem: ({ element }) => {},
-				folderForm: ({ element }) => {},
-				folderCreateForm: ({ element }) => {},
-				folderEditForm: ({ element }) => {},
-				imageEditForm: ({ element }) => {},
+				folderItem: ({ element, folder }) => {},
+				folderForm: ({ addField, container, form }) => {},
+				folderCreateForm: ({ addField, form }) => {},
+				folderEditForm: ({ addField, form }) => {},
+				imageCreateForm: ({ addField, form }) => {},
+				imageEditForm: ({ addField, container, form }) => {},
 				imageItem: ({ element }) => {
 					element.querySelector('a').setAttribute('data-fslightbox', true);
 				},
 				modal: ({ element }) => {},
 				spinner: ({ element }) => {},
+				title: ({ element, title }) => {},
+				toast: ({ element }) => {},
 			},
 		});
 		</script>
