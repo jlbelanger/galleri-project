@@ -28,6 +28,10 @@
 		<script src="https://unpkg.com/fslightbox@3.1.0/index.js" integrity="sha384-HpFPRJTv1hMt/0XGUpq+/fMLpT+t4E8MwBd77nggUDvbEuBGnv5TV+ZIxW0TvHfX" crossorigin="anonymous"></script>
 		<script>
 		Robroy.default.init({
+			apiFoldersPath: '/json/folders.json',
+			apiImagesPath: '/json/images.json',
+			apiPath: '/api.php',
+
 			callbacks: {
 				afterCreateImage: ({ image }) => { refreshFsLightbox(); },
 				afterCreateFolder: ({ folder }) => {},
@@ -44,6 +48,12 @@
 			},
 
 			enableGrid: true,
+			enableRewrites: true,
+			folderItemElement: 'li',
+			folderSeparator: ' > ',
+			imageItemElement: 'figure',
+			localStorageKey: 'authenticated',
+			metaTitleSeparator: ' | ',
 
 			modifiers: {
 				adminBar: ({ element }) => {},
@@ -63,6 +73,11 @@
 				title: ({ element, title }) => {},
 				toast: ({ element }) => {},
 			},
+
+			pageSize: 8,
+			removePointerEventsOnLogin: false,
+			selector: '#robroy',
+			showAllImages: false,
 		});
 		</script>
 	</body>
