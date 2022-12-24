@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html class="no-js" lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<title>Robroy Photo Gallery Demo</title>
 		<link rel="stylesheet" href="/css/dark.min.css">
+		<script>document.documentElement.classList.remove('no-js');</script>
 	</head>
 	<body>
 		<main>
@@ -15,7 +16,9 @@
 				</div>
 			</header>
 			<article>
+				<noscript>You need to enable JavaScript to run this app.</noscript>
 				<div class="contain" id="robroy"></div>
+				<div class="robroy-spinner" role="alert">Loading...</div>
 			</article>
 			<footer id="footer">
 				<div class="contain" id="footer-inner">
