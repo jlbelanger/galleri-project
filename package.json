@@ -1,7 +1,7 @@
 {
 	"private": true,
 	"devDependencies": {
-		"@jlbelanger/robroy": "jlbelanger/robroy#main",
+		"@jlbelanger/galleri": "jlbelanger/galleri#main",
 		"autoprefixer": "^10.4.13",
 		"cssnano": "^5.1.14",
 		"gulp": "^4.0.2",

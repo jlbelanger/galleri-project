@@ -2,12 +2,12 @@
 set -e
 
 read -p "Enter your project title (eg. 'My Gallery'): " project_title
-sed --in-place "s|Robroy Photo Gallery Demo|${project_title}|" public/403.html
-sed --in-place "s|Robroy Photo Gallery Demo|${project_title}|" public/404.html
-sed --in-place "s|Robroy Photo Gallery Demo|${project_title}|" composer.json
+sed --in-place "s|Galleri Demo|${project_title}|" public/403.html
+sed --in-place "s|Galleri Demo|${project_title}|" public/404.html
+sed --in-place "s|Galleri Demo|${project_title}|" composer.json
 
 read -p "Enter your project name (eg. 'username/project-name'): " project_name
-sed --in-place "s|jlbelanger/robroy-project|${project_name}|" composer.json
+sed --in-place "s|jlbelanger/galleri-project|${project_name}|" composer.json
 
 printf "\n"
 printf "Which theme do you want to use?\n"
@@ -29,12 +29,12 @@ elif [[ "${theme}" == "3" ]]; then
 	rm public/index.html
 	mv public/minimal.html public/index.html
 fi
-sed --in-place "s|Robroy Photo Gallery Demo|${project_title}|" public/index.html
+sed --in-place "s|Galleri Demo|${project_title}|" public/index.html
 
-read -p "Enter the absolute path to the project (eg. '/var/www/robroy/'): " project_path
-sed --in-place "s|/path/to/robroy/|${project_path}|" public/.htaccess
+read -p "Enter the absolute path to the project (eg. '/var/www/galleri/'): " project_path
+sed --in-place "s|/path/to/galleri/|${project_path}|" public/.htaccess
 cp .env.example .env
-sed --in-place "s|/path/to/robroy/|${project_path}|" .env
+sed --in-place "s|/path/to/galleri/|${project_path}|" .env
 
 mkdir public/css
 mkdir public/images
@@ -47,7 +47,7 @@ sed --in-place "s|dark.min.css|style.min.css|" public/index.html
 
 yarn install
 yarn build
-cp node_modules/@jlbelanger/robroy/dist/js/robroy.min.js public/js
+cp node_modules/@jlbelanger/galleri/dist/js/galleri.min.js public/js
 
 read -p "Enter the username you want to use to login: " username
 htpasswd -c .htpasswd "${username}"

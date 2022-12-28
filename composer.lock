@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "26f1d577910488ff109892665af24206",
+    "content-hash": "0f385028611a5d50fb5aa17e48a48ca9",
     "packages": [
         {
             "name": "graham-campbell/result-type",
@@ -69,17 +69,17 @@
             "time": "2022-07-30T15:56:11+00:00"
         },
         {
-            "name": "jlbelanger/robroy",
+            "name": "jlbelanger/galleri",
             "version": "dev-main",
             "source": {
                 "type": "git",
-                "url": "https://github.com/jlbelanger/robroy.git",
-                "reference": "706a5b4ebf707848fa874f5e41baa7e29363f9a5"
+                "url": "https://github.com/jlbelanger/galleri.git",
+                "reference": "e20e1875cedac6052764f15711fe69871d895a8e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jlbelanger/robroy/zipball/706a5b4ebf707848fa874f5e41baa7e29363f9a5",
-                "reference": "706a5b4ebf707848fa874f5e41baa7e29363f9a5",
+                "url": "https://api.github.com/repos/jlbelanger/galleri/zipball/e20e1875cedac6052764f15711fe69871d895a8e",
+                "reference": "e20e1875cedac6052764f15711fe69871d895a8e",
                 "shasum": ""
             },
             "require-dev": {
@@ -91,7 +91,7 @@
             "type": "project",
             "autoload": {
                 "psr-4": {
-                    "Jlbelanger\\Robroy\\": "src/"
+                    "Jlbelanger\\Galleri\\": "src/"
                 }
             },
             "autoload-dev": {
@@ -111,10 +111,10 @@
             ],
             "description": "Databaseless vanilla PHP photo gallery.",
             "support": {
-                "source": "https://github.com/jlbelanger/robroy/tree/main",
-                "issues": "https://github.com/jlbelanger/robroy/issues"
+                "source": "https://github.com/jlbelanger/galleri/tree/main",
+                "issues": "https://github.com/jlbelanger/galleri/issues"
             },
-            "time": "2022-12-28T15:31:31+00:00"
+            "time": "2022-12-28T16:01:20+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -528,7 +528,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "jlbelanger/robroy": 20
+        "jlbelanger/galleri": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

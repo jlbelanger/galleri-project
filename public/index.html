@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<title>Robroy Photo Gallery Demo</title>
+		<title>Galleri Demo</title>
 		<link rel="stylesheet" href="/css/dark.min.css">
 		<script>document.documentElement.classList.remove('no-js');</script>
 	</head>
@@ -11,25 +11,25 @@
 		<main>
 			<header id="header">
 				<div class="contain" id="header-inner">
-					<a href="/" id="title">Robroy Photo Gallery Demo</a>
-					<button class="robroy-button robroy-button--secondary robroy-button-authenticate" data-action="authenticate" type="button"></button>
+					<a href="/" id="title">Galleri Demo</a>
+					<button class="galleri-button galleri-button--secondary galleri-button-authenticate" data-action="authenticate" type="button"></button>
 				</div>
 			</header>
 			<article>
 				<noscript>You need to enable JavaScript to run this app.</noscript>
-				<div class="contain" id="robroy"></div>
+				<div class="contain" id="galleri"></div>
 			</article>
 			<footer id="footer">
 				<div class="contain" id="footer-inner">
-					<p><a href="https://github.com/jlbelanger/robroy/">Robroy Photo Gallery</a></p>
+					<p><a href="https://github.com/jlbelanger/galleri/">Galleri</a></p>
 				</div>
 			</footer>
 		</main>
-		<div class="robroy-spinner" role="alert">Loading...</div>
-		<script src="/js/robroy.min.js"></script>
+		<div class="galleri-spinner" role="alert">Loading...</div>
+		<script src="/js/galleri.min.js"></script>
 		<script src="https://unpkg.com/fslightbox@3.1.0/index.js" integrity="sha384-HpFPRJTv1hMt/0XGUpq+/fMLpT+t4E8MwBd77nggUDvbEuBGnv5TV+ZIxW0TvHfX" crossorigin="anonymous"></script>
 		<script>
-		Robroy.default.init({
+		Galleri.default.init({
 			apiFoldersPath: '/json/folders.json',
 			apiImagesPath: '/json/images.json',
 			apiPath: '/api.php',
@@ -78,7 +78,7 @@
 
 			pageSize: 8,
 			removePointerEventsOnLogin: false,
-			selector: '#robroy',
+			selector: '#galleri',
 			showAllImages: false,
 		});
 		</script>

@@ -5,7 +5,7 @@ ErrorDocument 404 /404.html
 
 AuthType basic
 AuthName "Enter password"
-AuthUserFile /path/to/robroy/.htpasswd
+AuthUserFile /path/to/galleri/.htpasswd
 <Limit POST PUT DELETE>
 	Require valid-user
 </Limit>

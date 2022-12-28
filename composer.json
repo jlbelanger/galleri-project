@@ -1,10 +1,10 @@
 {
-	"name": "jlbelanger/robroy-project",
-	"description": "Robroy Photo Gallery Demo",
+	"name": "jlbelanger/galleri-project",
+	"description": "Galleri Demo",
 	"type": "project",
 	"license": "GPL-3.0-only",
 	"require": {
-		"jlbelanger/robroy": "@dev",
+		"jlbelanger/galleri": "@dev",
 		"vlucas/phpdotenv": "^5.5"
 	},
 	"minimum-stability": "dev",
@@ -12,7 +12,7 @@
 	"repositories": [
 		{
 			"type": "vcs",
-			"url": "git@github.com:jlbelanger/robroy.git"
+			"url": "git@github.com:jlbelanger/galleri.git"
 		}
 	],
 	"scripts": {

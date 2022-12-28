@@ -18,8 +18,8 @@ gulp.task('default', () => {
 	gulp.watch([
 		'scss/*.scss',
 		'scss/**/*.scss',
-		'node_modules/@jlbelanger/robroy/scss/*.scss',
-		'node_modules/@jlbelanger/robroy/scss/**/*.scss',
+		'node_modules/@jlbelanger/galleri/scss/*.scss',
+		'node_modules/@jlbelanger/galleri/scss/**/*.scss',
 	], css);
 });
 

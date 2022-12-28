@@ -1,4 +1,4 @@
-# Robroy Example Project
+# Galleri Demo
 
 Add an additional user account:
 
