@@ -4,7 +4,7 @@
 
 "@jlbelanger/robroy@jlbelanger/robroy#main":
   version "1.0.2"
-  resolved "https://codeload.github.com/jlbelanger/robroy/tar.gz/828cfcd796b9c6508195ea99743b78ae53ab16db"
+  resolved "https://codeload.github.com/jlbelanger/robroy/tar.gz/706a5b4ebf707848fa874f5e41baa7e29363f9a5"
   dependencies:
     normalize.css "^8.0.1"
 
