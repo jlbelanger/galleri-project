@@ -39,6 +39,7 @@ elif [[ "${theme}" == "3" ]]; then
 		rm js/main.js
 		mv js/minimal.js js/main.js
 		sed --in-place 's|\n\t\t"@jlbelanger/robroy": "jlbelanger/robroy#main",||' package.json
+		sed --in-place 's|@import '\.\./node_modules/@jlbelanger/robroy/src/scss/robroy';||' scss/minimal.scss
 	fi
 
 	rm scss/light.scss
@@ -53,7 +54,9 @@ elif [[ "${theme}" == "3" ]]; then
 fi
 sed --in-place "s|Galleri Demo|${project_title}|" src/header.php
 
-read -p "\nEnter the absolute path to the project, including a leading and trailing slash (eg. '/var/www/galleri/'): " project_path
+printf "\n"
+read -p "Enter the absolute path to the project, including a leading and trailing slash (eg. '/var/www/galleri/'): " project_path
+printf "\n"
 sed --in-place "s|/path/to/galleri/|${project_path}|" public/.htaccess
 cp .env.example .env
 sed --in-place "s|/path/to/galleri/|${project_path}|" .env
@@ -62,14 +65,14 @@ mkdir build
 mkdir public/images
 mkdir public/json
 
-yarn install
-yarn build
-
 read -p "Enter the username you want to use to login: " username
 htpasswd -c .htpasswd "${username}"
 
-printf "Done!\n"
+sed --in-place 's|\t"scripts": {\n\t\t"post-create-project-cmd": \[\n\t\t\t"\./setup\.sh"\n\t\t\]\n\t},||' composer.json
 
-sed --in-place 's|\t"scripts": \{\n\t\t"post-create-project-cmd": \[\n\t\t\t"\./setup\.sh"\n\t\t\]\n\t\},||' composer.json
+yarn install
+yarn build
+
+printf "Done!\n"
 
 rm setup.sh

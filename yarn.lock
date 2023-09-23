@@ -195,14 +195,14 @@
   integrity sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==
 
 "@jlbelanger/galleri@jlbelanger/galleri#main":
-  version "1.0.2"
-  resolved "https://codeload.github.com/jlbelanger/galleri/tar.gz/e20e1875cedac6052764f15711fe69871d895a8e"
+  version "1.0.3"
+  resolved "https://codeload.github.com/jlbelanger/galleri/tar.gz/fbab284132d7a2d4653f12a1f99443190dc94c54"
   dependencies:
     normalize.css "^8.0.1"
 
 "@jlbelanger/robroy@jlbelanger/robroy#main":
   version "1.0.0"
-  resolved "git+ssh://git@github.com/jlbelanger/robroy.git#7b95e922da3ba80ae7b74d4b5373fa2132912ff5"
+  resolved "https://codeload.github.com/jlbelanger/robroy/tar.gz/06f7f6add0eeee10cfcc9f3b75efa8008ff7cfeb"
 
 "@jridgewell/gen-mapping@^0.3.0", "@jridgewell/gen-mapping@^0.3.2":
   version "0.3.3"
