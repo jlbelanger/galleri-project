@@ -24,7 +24,7 @@
 		"webpack-manifest-plugin": "^5.0.0"
 	},
 	"scripts": {
-		"build": "rm -rf build/ && node_modules/.bin/webpack --mode=production",
+		"build": "node_modules/.bin/webpack --mode=production",
 		"start": "npx update-browserslist-db@latest && node_modules/.bin/webpack --watch"
 	}
 }
