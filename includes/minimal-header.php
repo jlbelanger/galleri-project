@@ -8,3 +8,4 @@
 		<link rel="stylesheet" href="<?= mix('/css/style.min.css'); ?>">
 	</head>
 	<body>
+		<button data-action="authenticate" type="button"></button>
