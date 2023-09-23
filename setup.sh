@@ -3,7 +3,7 @@ set -e
 
 read -p "Enter your project title (eg. 'My Gallery'): " project_title
 sed --in-place "s|Galleri Demo|${project_title}|" composer.json
-sed --in-place "s|Galleri Demo|${project_title}|" public/README.md
+sed --in-place "s|Galleri Demo|${project_title}|" README.md
 
 read -p "Enter your project name (eg. 'username/project-name'): " project_name
 sed --in-place "s|jlbelanger/galleri-project|${project_name}|" composer.json
