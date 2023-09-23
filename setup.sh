@@ -49,8 +49,8 @@ elif [[ "${theme}" == "3" ]]; then
 	mv public/minimal.php public/index.php
 	rm includes/header.php
 	rm includes/footer.php
-	mv includes/minimal-header.php header.php
-	mv includes/minimal-footer.php footer.php
+	mv includes/minimal-header.php includes/header.php
+	mv includes/minimal-footer.php includes/footer.php
 fi
 sed --in-place "s|Galleri Demo|${project_title}|" includes/header.php
 
