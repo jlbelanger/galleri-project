@@ -2,12 +2,12 @@
 set -e
 
 read -p "Enter your project title (eg. 'My Gallery'): " project_title
-sed --in-place "s|Galleri Demo|${project_title}|" public/403.html
-sed --in-place "s|Galleri Demo|${project_title}|" public/404.html
 sed --in-place "s|Galleri Demo|${project_title}|" composer.json
+sed --in-place "s|Galleri Demo|${project_title}|" public/README.md
 
 read -p "Enter your project name (eg. 'username/project-name'): " project_name
 sed --in-place "s|jlbelanger/galleri-project|${project_name}|" composer.json
+sed --in-place "s|jlbelanger/galleri-project|${project_name}|" package.json
 
 printf "\n"
 printf "Which theme do you want to use?\n"
@@ -16,42 +16,60 @@ printf "[2] Light\n"
 printf "[3] Minimal (no theme)\n"
 read -p "Enter 1, 2, or 3: " theme
 if [[ "${theme}" == "1" ]]; then
+	rm js/minimal.js
 	rm scss/light.scss
 	rm scss/minimal.scss
-	rm public/minimal.html
+	mv scss/dark.scss scss/style.scss
+	rm public/minimal.php
+	rm src/minimal-header.php
+	rm src/minimal-footer.php
 elif [[ "${theme}" == "2" ]]; then
+	rm js/minimal.js
 	rm scss/dark.scss
 	rm scss/minimal.scss
-	rm public/minimal.html
+	mv scss/light.scss scss/style.scss
+	rm public/minimal.php
+	rm src/minimal-header.php
+	rm src/minimal-footer.php
 elif [[ "${theme}" == "3" ]]; then
+	read -p "Do you want to include Robroy lightbox? Enter [y] for yes: " lightbox
+	if [[ "${lightbox}" != "y" ]]; then
+		rm js/minimal.js
+	else
+		rm js/main.js
+		mv js/minimal.js js/main.js
+		sed --in-place 's|\n\t\t"@jlbelanger/robroy": "jlbelanger/robroy#main",||' package.json
+	fi
+
 	rm scss/light.scss
 	rm scss/dark.scss
-	rm public/index.html
-	mv public/minimal.html public/index.html
+	mv scss/minimal.scss scss/style.scss
+	rm public/index.php
+	mv public/minimal.php public/index.php
+	rm src/header.php
+	rm src/footer.php
+	mv src/minimal-header.php header.php
+	mv src/minimal-footer.php footer.php
 fi
-sed --in-place "s|Galleri Demo|${project_title}|" public/index.html
+sed --in-place "s|Galleri Demo|${project_title}|" src/header.php
 
-read -p "Enter the absolute path to the project (eg. '/var/www/galleri/'): " project_path
+read -p "\nEnter the absolute path to the project, including a leading and trailing slash (eg. '/var/www/galleri/'): " project_path
 sed --in-place "s|/path/to/galleri/|${project_path}|" public/.htaccess
 cp .env.example .env
 sed --in-place "s|/path/to/galleri/|${project_path}|" .env
 
-mkdir public/css
+mkdir build
 mkdir public/images
-mkdir public/js
 mkdir public/json
-
-sed --in-place "s|dark.min.css|style.min.css|" public/403.html
-sed --in-place "s|dark.min.css|style.min.css|" public/404.html
-sed --in-place "s|dark.min.css|style.min.css|" public/index.html
 
 yarn install
 yarn build
-cp node_modules/@jlbelanger/galleri/dist/js/galleri.min.js public/js
 
 read -p "Enter the username you want to use to login: " username
 htpasswd -c .htpasswd "${username}"
 
 printf "Done!\n"
+
+sed --in-place 's|\t"scripts": \{\n\t\t"post-create-project-cmd": \[\n\t\t\t"\./setup\.sh"\n\t\t\]\n\t\},||' composer.json
 
 rm setup.sh

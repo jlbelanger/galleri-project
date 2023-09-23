@@ -2,7 +2,8 @@
 .env
 .htpasswd
 *.log
+/build
+/node_modules
 /public/images
 /public/json/*.json
 /vendor
-node_modules

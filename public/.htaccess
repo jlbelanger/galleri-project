@@ -1,11 +1,15 @@
-RewriteEngine On
-
-ErrorDocument 403 /403.html
-ErrorDocument 404 /404.html
+ErrorDocument 403 /403.php
+ErrorDocument 404 /404.php
 
 AuthType basic
 AuthName "Enter password"
 AuthUserFile /path/to/galleri/.htpasswd
+
 <Limit POST PUT DELETE>
 	Require valid-user
 </Limit>
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ /index.php [L]
