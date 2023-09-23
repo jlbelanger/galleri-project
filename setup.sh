@@ -39,7 +39,7 @@ elif [[ "${theme}" == "3" ]]; then
 		rm js/main.js
 		mv js/minimal.js js/main.js
 		sed --in-place 's|\n\t\t"@jlbelanger/robroy": "jlbelanger/robroy#main",||' package.json
-		sed --in-place 's|@import '\.\./node_modules/@jlbelanger/robroy/src/scss/robroy';||' scss/minimal.scss
+		sed --in-place 's|@import '\.\./node_modules/@jlbelanger/robroy/scss/robroy';||' scss/minimal.scss
 	fi
 
 	rm scss/light.scss
