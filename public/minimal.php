@@ -1,5 +1,5 @@
-<?php require_once '../src/header.php'; ?>
+<?php require_once '../includes/header.php'; ?>
 
 <div id="galleri"></div>
 
-<?php require_once '../src/footer.php';
+<?php require_once '../includes/footer.php';
