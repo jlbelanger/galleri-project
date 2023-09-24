@@ -53,6 +53,7 @@ module.exports = {
 			proxy: process.env.APP_URL,
 			port: 3000,
 			files: [
+				'includes/**/*',
 				'js/**/*',
 				'public/**/*',
 				'scss/**/*',
