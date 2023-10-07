@@ -1,5 +1,7 @@
 # Galleri Demo
 
+[View the demo](https://galleri.jennybelanger.com/).
+
 Add an additional user account:
 
 ``` bash

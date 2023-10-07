@@ -89,6 +89,7 @@ Galleri.init({
 	},
 
 	localStorageKey: 'authenticated',
+	maxFileSizeMegabytes: null,
 	metaTitleSeparator: ' | ',
 
 	modifiers: {

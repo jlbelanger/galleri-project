@@ -21,6 +21,6 @@
 		]
 	},
 	"config": {
-		"discard-changes" : true
+		"discard-changes": true
 	}
 }
