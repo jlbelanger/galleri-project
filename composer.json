@@ -4,8 +4,9 @@
 	"type": "project",
 	"license": "GPL-3.0-only",
 	"require": {
+		"php": "^8.2",
 		"jlbelanger/galleri": "@dev",
-		"vlucas/phpdotenv": "^5.5"
+		"vlucas/phpdotenv": "^5.6.0"
 	},
 	"minimum-stability": "dev",
 	"prefer-stable": true,
