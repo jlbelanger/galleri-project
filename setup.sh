@@ -10,28 +10,17 @@ sed --in-place "s|jlbelanger/galleri-project|${project_name}|" composer.json
 sed --in-place "s|jlbelanger/galleri-project|${project_name}|" package.json
 
 printf "\n"
-printf "Which theme do you want to use?\n"
-printf "[1] Dark\n"
-printf "[2] Light\n"
-printf "[3] Minimal (no theme)\n"
-read -p "Enter 1, 2, or 3: " theme
+printf "Do you want to use a theme?\n"
+printf "[1] Basic theme\n"
+printf "[2] No theme\n"
+read -p "Enter 1 or 2: " theme
 if [[ "${theme}" == "1" ]]; then
 	rm js/minimal.js
-	rm scss/light.scss
 	rm scss/minimal.scss
-	mv scss/dark.scss scss/style.scss
 	rm public/minimal.php
 	rm includes/minimal-header.php
 	rm includes/minimal-footer.php
 elif [[ "${theme}" == "2" ]]; then
-	rm js/minimal.js
-	rm scss/dark.scss
-	rm scss/minimal.scss
-	mv scss/light.scss scss/style.scss
-	rm public/minimal.php
-	rm includes/minimal-header.php
-	rm includes/minimal-footer.php
-elif [[ "${theme}" == "3" ]]; then
 	read -p "Do you want to include Robroy lightbox? Enter [y] for yes: " lightbox
 	if [[ "${lightbox}" != "y" ]]; then
 		rm js/minimal.js
@@ -42,8 +31,7 @@ elif [[ "${theme}" == "3" ]]; then
 		sed --in-place 's|@import '\.\./node_modules/@jlbelanger/robroy/scss/robroy';||' scss/minimal.scss
 	fi
 
-	rm scss/light.scss
-	rm scss/dark.scss
+	rm scss/style.scss
 	mv scss/minimal.scss scss/style.scss
 	rm public/index.php
 	mv public/minimal.php public/index.php

@@ -94,7 +94,13 @@ module.exports = {
 							postcssOptions: {
 								plugins: [
 									'autoprefixer',
-									'cssnano',
+									{
+										cssnano: {
+											// Disable postcss-calc to avoid warnings about calc() inside hsl().
+											// https://github.com/postcss/postcss-calc/issues/216
+											preset: ['default', { calc: false }],
+										},
+									},
 									'postcss-preset-env',
 								],
 							},
