@@ -1,8 +1,0 @@
-@use '~@jlbelanger/galleri/scss/utilities/variables' with (
-	/* Overrides go here. For example: */
-	$galleri-image-width: 300px,
-);
-@use '~@jlbelanger/galleri/scss/galleri';
-@use '~@jlbelanger/galleri/scss/theme/layout';
-@use '~@jlbelanger/galleri/scss/theme/link';
-@use '~@jlbelanger/robroy/scss/robroy';

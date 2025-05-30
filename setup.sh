@@ -16,7 +16,7 @@ printf "[2] No theme\n"
 read -p "Enter 1 or 2: " theme
 if [[ "${theme}" == "1" ]]; then
 	rm js/minimal.js
-	rm scss/minimal.scss
+	rm css/minimal.css
 	rm public/minimal.php
 	rm includes/minimal-header.php
 	rm includes/minimal-footer.php
@@ -28,11 +28,11 @@ elif [[ "${theme}" == "2" ]]; then
 		rm js/main.js
 		mv js/minimal.js js/main.js
 		sed --in-place 's|\n\t\t"@jlbelanger/robroy": "jlbelanger/robroy#main",||' package.json
-		sed --in-place 's|@import '\.\./node_modules/@jlbelanger/robroy/scss/robroy';||' scss/minimal.scss
+		sed --in-place 's|@import '\.\./node_modules/@jlbelanger/robroy/css/robroy';||' css/minimal.css
 	fi
 
-	rm scss/style.scss
-	mv scss/minimal.scss scss/style.scss
+	rm css/style.css
+	mv css/minimal.css css/style.css
 	rm public/index.php
 	mv public/minimal.php public/index.php
 	rm includes/header.php
