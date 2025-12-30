@@ -6,7 +6,7 @@
 	"require": {
 		"php": "^8.4",
 		"jlbelanger/galleri": "@dev",
-		"vlucas/phpdotenv": "^5.6.1"
+		"vlucas/phpdotenv": "^5.6.2"
 	},
 	"minimum-stability": "dev",
 	"prefer-stable": true,
