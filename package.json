@@ -4,6 +4,7 @@
 	"private": true,
 	"devDependencies": {
 		"@babel/core": "^7.26.0",
+		"@csstools/postcss-global-data": "^3.1.0",
 		"@jlbelanger/galleri": "jlbelanger/galleri#main",
 		"@jlbelanger/robroy": "jlbelanger/robroy#main",
 		"babel-loader": "^10.0.0",
@@ -22,8 +23,8 @@
 		"webpack-manifest-plugin": "^6.0.1"
 	},
 	"scripts": {
-		"build": "node_modules/.bin/webpack --mode=production",
-		"start": "node_modules/.bin/update-browserslist-db && node_modules/.bin/webpack --watch"
+		"build": "npx webpack --mode=production",
+		"start": "npx update-browserslist-db && npx webpack --watch"
 	},
 	"browserslist": [
 		"defaults",

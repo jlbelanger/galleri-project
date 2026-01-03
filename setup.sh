@@ -57,9 +57,9 @@ printf "\n"
 
 sed --in-place 's|\t"scripts": {\n\t\t"post-create-project-cmd": \[\n\t\t\t"\./setup\.sh"\n\t\t\]\n\t},||' composer.json
 
-yarn install
+npm install
 printf "\n"
-yarn build
+npm run build
 mkdir build/images
 mkdir build/json
 
