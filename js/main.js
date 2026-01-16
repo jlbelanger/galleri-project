@@ -12,14 +12,22 @@ Galleri.init({
 
 	callbacks: {
 		afterCreateFolder: ({ folder }) => {},
-		afterCreateImage: ({ image }) => { initRobroy(); },
+		afterCreateImage: ({ image }) => {
+			initRobroy();
+		},
 		afterDeleteFolder: ({ id }) => {},
-		afterDeleteImage: ({ id }) => { initRobroy(); },
+		afterDeleteImage: ({ id }) => {
+			initRobroy();
+		},
 		afterEditFolder: ({ folder }) => {},
-		afterEditImage: ({ image }) => { initRobroy(); },
+		afterEditImage: ({ image }) => {
+			initRobroy();
+		},
 		afterLoadFolder: ({ folder }) => {},
 		afterLoadImage: ({ element }) => {},
-		afterLoadImages: ({ images }) => { initRobroy(); },
+		afterLoadImages: ({ images }) => {
+			initRobroy();
+		},
 		afterLogin: () => {},
 		afterLogout: () => {},
 		afterMakeThumbnail: ({ folderId, image }) => {},

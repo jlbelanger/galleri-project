@@ -4,12 +4,12 @@
 
 Add an additional user account:
 
-``` bash
+```bash
 htpasswd .htpasswd USERNAME
 ```
 
 Change existing account password:
 
-``` bash
+```bash
 htpasswd -c .htpasswd USERNAME
 ```
